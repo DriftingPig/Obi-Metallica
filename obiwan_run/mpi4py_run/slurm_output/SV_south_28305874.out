@@ -1,0 +1,30 @@
+entering srun
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+I am  nid00551 rank 0 (total 10)
+Traceback (most recent call last):
+  File "./example1.py", line 111, in <module>
+    main()
+  File "./example1.py", line 101, in main
+    app.run()
+  File "./example1.py", line 40, in run
+    task_list = np.loadtxt(BRICKSTAT_DIR + 'UnfinishedBricks.txt', dtype=np.str)
+  File "/usr/local/lib/python3.5/site-packages/numpy/lib/npyio.py", line 926, in loadtxt
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+  File "/usr/local/lib/python3.5/site-packages/numpy/lib/_datasource.py", line 262, in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+  File "/usr/local/lib/python3.5/site-packages/numpy/lib/_datasource.py", line 618, in open
+    raise IOError("%s not found." % path)
+OSError: /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/py/obiwan/Drones/obiwan_analysis/preprocess/brickstat/SV_south/UnfinishedBricks.txt not found.
+slurmstepd: error: *** STEP 28305874.1 ON nid00551 CANCELLED AT 2020-02-20T20:03:13 ***
+srun: got SIGCONT
+slurmstepd: error: *** JOB 28305874 ON nid00551 CANCELLED AT 2020-02-20T20:03:13 ***
+srun: forcing job termination

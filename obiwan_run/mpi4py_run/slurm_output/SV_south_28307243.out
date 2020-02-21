@@ -1,0 +1,125 @@
+entering srun
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/345//rs0/log.3458m002
+Running on nid00601
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/141//rs0/log.1412m057
+Running on nid00633
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/242//rs0/log.2421p142
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/166//rs0/log.1664p290
+Running on nid00632
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/165//rs0/log.1652p165
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/349//rs0/log.3499p107
+Running on nid00613
+Running on nid00630
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/166//rs0/log.1661p152
+Running on nid00632
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/243//rs0/log.2436p017
+Running on nid00613
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/125//rs0/log.1250p082
+Running on nid00630
+I am  nid00601 rank 1 (total 10)
+3458m002
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/141//rs0/log.1415m050
+Running on nid00601
+I am  nid00633 rank 9 (total 10)
+1412m057
+I am  nid00633 rank 8 (total 10)
+2421p142
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/182//rs0/log.1828m050
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/068//rs0/log.0684m240
+Running on nid00633
+I am  nid00613 rank 2 (total 10)
+1652p165
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/358//rs0/log.3588p002
+Running on nid00613
+  Slave nid00613 rank 2 executing "1652p165" task_id "4"
+3588p002
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/193//rs0/log.1938p015
+Running on nid00613
+I am  nid00630 rank 4 (total 10)
+3499p107
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/244//rs0/log.2445p160
+Running on nid00630
+I am  nid00630 rank 5 (total 10)
+1250p082
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/225//rs0/log.2252m045
+Running on nid00630
+I am  nid00613 rank 3 (total 10)
+2436p017
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/023//rs0/log.0234p092
+Running on nid00613
+  Slave nid00633 rank 9 executing "1412m057" task_id "3"
+1828m050
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/351//rs0/log.3518p210
+Running on nid00633
+  Slave nid00601 rank 1 executing "3458m002" task_id "1"
+1415m050
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/228//rs0/log.2285p132
+Running on nid00601
+I am  nid00632 rank 6 (total 10)
+1664p290
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/067//rs0/log.0670m240
+Running on nid00632
+I am  nid00632 rank 7 (total 10)
+1661p152
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/084//rs0/log.0848m240
+Running on nid00632
+slurmstepd: error: *** STEP 28307243.1 ON nid00601 CANCELLED AT 2020-02-20T21:03:15 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 28307243 ON nid00601 CANCELLED AT 2020-02-20T21:03:15 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: forcing job termination
+srun: forcing job termination

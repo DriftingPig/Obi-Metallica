@@ -1,0 +1,19 @@
+==> /global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_code/obiwan_run/mpi4py_run/slurm_output <==
+
+==> /global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/166//rs0/log.1661p152 <==
+INFO:legacypipe.outliers:Image decam-00511292-N29 z : masking 33991 positive outlier pixels and 0 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00520943-N20 z : masking 885 positive outlier pixels and 132 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00626375-S30 z : masking 1598 positive outlier pixels and 0 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00608265-S26 z : masking 1501 positive outlier pixels and 954 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00626374-N28 z : masking 7904 positive outlier pixels and 0 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00626375-S29 z : masking 4494 positive outlier pixels and 0 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00626375-S22 z : masking 727 positive outlier pixels and 424 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00608265-S27 z : masking 5007 positive outlier pixels and 201 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00626375-S25 z : masking 3532 positive outlier pixels and 0 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00509916-S23 z : masking 10585 positive outlier pixels and 476 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00511292-N25 z : masking 12992 positive outlier pixels and 235 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00626375-S21 z : masking 3775 positive outlier pixels and 350 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00608265-S22 z : masking 3766 positive outlier pixels and 1363 negative outlier pixels
+INFO:legacypipe.outliers:Image decam-00626375-S26 z : masking 16176 positive outlier pixels and 933 negative outlier pixels
+Running stage outliers at 2020-02-20T20:37:15.208906
+INFO:legacypipe.survey:Wrote /global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/166/1661p152/rs0/metrics/166/outlier-mask-1661p152.fits.fz

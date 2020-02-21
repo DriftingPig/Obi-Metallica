@@ -1,0 +1,953 @@
+entering srun
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+mesg: ttyname failed: Inappropriate ioctl for device
+entering scheduler...
+entering scheduler...
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/165//rs0/log.1652p165
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/166//rs0/log.1664p290
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/141//rs0/log.1412m057
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/242//rs0/log.2421p142
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/345//rs0/log.3458m002
+Running on nid00633
+Running on nid00631
+Running on nid00632
+Running on nid00601
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/349//rs0/log.3499p107
+Running on nid00631
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/166//rs0/log.1661p152
+Running on nid00630
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/243//rs0/log.2436p017
+Running on nid00632
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/125//rs0/log.1250p082
+Running on nid00630
+I am  nid00601 rank 1 (total 10)
+3458m002
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/141//rs0/log.1415m050
+Running on nid00601
+I am  nid00633 rank 9 (total 10)
+1652p165
+I am  nid00633 rank 8 (total 10)
+2421p142
+I am  nid00630 rank 2 (total 10)
+1661p152
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/068//rs0/log.0684m240
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/182//rs0/log.1828m050
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/358//rs0/log.3588p002
+Running on nid00630
+I am  nid00632 rank 6 (total 10)
+1412m057
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/193//rs0/log.1938p015
+Running on nid00632
+I am  nid00632 rank 7 (total 10)
+2436p017
+I am  nid00631 rank 5 (total 10)
+3499p107
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/244//rs0/log.2445p160
+Running on nid00631
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/225//rs0/log.2252m045
+Running on nid00632
+I am  nid00631 rank 4 (total 10)
+1664p290
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/023//rs0/log.0234p092
+Running on nid00631
+I am  nid00630 rank 3 (total 10)
+1250p082
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/351//rs0/log.3518p210
+Running on nid00630
+  Slave nid00601 rank 1 executing "3458m002" task_id "1"
+1415m050
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/228//rs0/log.2285p132
+Running on nid00601
+  Slave nid00630 rank 2 executing "1661p152" task_id "6"
+3588p002
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/067//rs0/log.0670m240
+Running on nid00630
+  Slave nid00633 rank 9 executing "1652p165" task_id "4"
+1828m050
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/084//rs0/log.0848m240
+Running on nid00633
+  Slave nid00631 rank 5 executing "3499p107" task_id "5"
+2445p160
+  Slave nid00631 rank 4 executing "1664p290" task_id "2"
+0234p092
+  Slave nid00632 rank 6 executing "1412m057" task_id "3"
+1938p015
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/322//rs0/log.3221p190
+Running on nid00631
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/082//rs0/log.0827m242
+Running on nid00632
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/250//rs0/log.2501p130
+Running on nid00631
+  Slave nid00632 rank 7 executing "2436p017" task_id "7"
+2252m045
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/162//rs0/log.1625p055
+Running on nid00632
+  Slave nid00630 rank 3 executing "1250p082" task_id "8"
+3518p210
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/183//rs0/log.1833m062
+Running on nid00630
+  Slave nid00633 rank 8 executing "2421p142" task_id "0"
+0684m240
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/350//rs0/log.3506p192
+Running on nid00633
+  Slave nid00601 rank 1 executing "1415m050" task_id "9"
+2285p132
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/164//rs0/log.1647p165
+Running on nid00601
+  Slave nid00630 rank 2 executing "3588p002" task_id "12"
+0670m240
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/251//rs0/log.2512p135
+Running on nid00630
+  Slave nid00631 rank 4 executing "0234p092" task_id "16"
+2501p130
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/165//rs0/log.1657p167
+Running on nid00631
+  Slave nid00631 rank 5 executing "2445p160" task_id "14"
+3221p190
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/350//rs0/log.3500p200
+Running on nid00631
+  Slave nid00632 rank 7 executing "2252m045" task_id "15"
+1625p055
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/349//rs0/log.3494p215
+Running on nid00632
+  Slave nid00630 rank 3 executing "3518p210" task_id "17"
+1833m062
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/347//rs0/log.3478m007
+Running on nid00630
+  Slave nid00633 rank 8 executing "0684m240" task_id "10"
+3506p192
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/141//rs0/log.1418m042
+Running on nid00633
+  Slave nid00632 rank 6 executing "1938p015" task_id "13"
+0827m242
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/245//rs0/log.2451p030
+Running on nid00632
+  Slave nid00633 rank 9 executing "1828m050" task_id "11"
+0848m240
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/349//rs0/log.3499p217
+Running on nid00633
+  Slave nid00601 rank 1 executing "2285p132" task_id "18"
+1647p165
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/006//rs0/log.0066p050
+Running on nid00601
+  Slave nid00630 rank 2 executing "0670m240" task_id "19"
+2512p135
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/124//rs0/log.1249p077
+Running on nid00630
+  Slave nid00630 rank 3 executing "1833m062" task_id "25"
+3478m007
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/085//rs0/log.0851m252
+Running on nid00630
+  Slave nid00633 rank 8 executing "3506p192" task_id "26"
+1418m042
+  Slave nid00631 rank 4 executing "2501p130" task_id "22"
+1657p167
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/209//rs0/log.2092p062
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/183//rs0/log.1838m055
+Running on nid00631
+  Slave nid00631 rank 5 executing "3221p190" task_id "21"
+3500p200
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/067//rs0/log.0678m222
+Running on nid00631
+  Slave nid00632 rank 7 executing "1625p055" task_id "24"
+3494p215
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/085//rs0/log.0853m240
+Running on nid00632
+  Slave nid00633 rank 9 executing "0848m240" task_id "20"
+3499p217
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/322//rs0/log.3225p170
+Running on nid00633
+  Slave nid00632 rank 6 executing "0827m242" task_id "23"
+2451p030
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/022//rs0/log.0229p097
+Running on nid00632
+  Slave nid00601 rank 1 executing "1647p165" task_id "27"
+0066p050
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/017//rs0/log.0175p215
+Running on nid00601
+  Slave nid00630 rank 2 executing "2512p135" task_id "28"
+1249p077
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/225//rs0/log.2250m047
+Running on nid00630
+  Slave nid00630 rank 3 executing "3478m007" task_id "32"
+0851m252
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/002//rs0/log.0021m107
+Running on nid00630
+  Slave nid00633 rank 8 executing "1418m042" task_id "33"
+2092p062
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/019//rs0/log.0198p205
+Running on nid00633
+  Slave nid00631 rank 4 executing "1657p167" task_id "29"
+1838m055
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/350//rs0/log.3501p115
+Running on nid00631
+  Slave nid00633 rank 9 executing "3499p217" task_id "35"
+3225p170
+  Slave nid00632 rank 6 executing "2451p030" task_id "34"
+0229p097
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/161//rs0/log.1612p070
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/008//rs0/log.0084m097
+Running on nid00632
+  Slave nid00601 rank 1 executing "0066p050" task_id "36"
+0175p215
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/347//rs0/log.3473p015
+Running on nid00601
+  Slave nid00631 rank 5 executing "3500p200" task_id "30"
+0678m222
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/160//rs0/log.1603p052
+Running on nid00631
+  Slave nid00630 rank 2 executing "1249p077" task_id "37"
+2250m047
+  Slave nid00632 rank 7 executing "3494p215" task_id "31"
+0853m240
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/008//rs0/log.0083p042
+Running on nid00630
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/131//rs0/log.1312p137
+Running on nid00632
+  Slave nid00633 rank 8 executing "2092p062" task_id "39"
+0198p205
+  Slave nid00630 rank 3 executing "0851m252" task_id "38"
+0021m107
+  Slave nid00631 rank 4 executing "1838m055" task_id "40"
+3501p115
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/161//rs0/log.1615p055
+Running on nid00633
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/132//rs0/log.1320p122
+Running on nid00631
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/153//rs0/log.1533p005
+Running on nid00630
+  Slave nid00601 rank 1 executing "0175p215" task_id "45"
+3473p015
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/161//rs0/log.1613p052
+Running on nid00601
+  Slave nid00633 rank 9 executing "3225p170" task_id "43"
+1612p070
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/126//rs0/log.1263p102
+Running on nid00633
+  Slave nid00632 rank 6 executing "0229p097" task_id "44"
+0084m097
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/008//rs0/log.0081p065
+Running on nid00632
+  Slave nid00631 rank 5 executing "0678m222" task_id "41"
+1603p052
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/351//rs0/log.3515p207
+Running on nid00631
+  Slave nid00632 rank 7 executing "0853m240" task_id "42"
+1312p137
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/068//rs0/log.0681m222
+Running on nid00632
+  Slave nid00630 rank 2 executing "2250m047" task_id "46"
+0083p042
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/228//rs0/log.2281p135
+Running on nid00630
+  Slave nid00633 rank 8 executing "0198p205" task_id "48"
+1615p055
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/224//rs0/log.2241m025
+Running on nid00633
+  Slave nid00630 rank 3 executing "0021m107" task_id "47"
+1533p005
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/347//rs0/log.3477p100
+Running on nid00630
+  Slave nid00601 rank 1 executing "3473p015" task_id "52"
+1613p052
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/252//rs0/log.2526p137
+Running on nid00601
+  Slave nid00631 rank 4 executing "3501p115" task_id "49"
+1320p122
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/009//rs0/log.0095m102
+Running on nid00631
+  Slave nid00633 rank 9 executing "1612p070" task_id "50"
+1263p102
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/181//rs0/log.1813m045
+Running on nid00633
+  Slave nid00632 rank 6 executing "0084m097" task_id "51"
+0081p065
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/165//rs0/log.1657p297
+Running on nid00632
+  Slave nid00631 rank 5 executing "1603p052" task_id "53"
+3515p207
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/182//rs0/log.1823m060
+Running on nid00631
+  Slave nid00630 rank 2 executing "0083p042" task_id "54"
+2281p135
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/008//rs0/log.0083p052
+Running on nid00630
+  Slave nid00632 rank 7 executing "1312p137" task_id "55"
+0681m222
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/126//rs0/log.1263p097
+Running on nid00632
+  Slave nid00633 rank 8 executing "1615p055" task_id "56"
+2241m025
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/165//rs0/log.1655p310
+Running on nid00633
+  Slave nid00630 rank 3 executing "1533p005" task_id "57"
+3477p100
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/127//rs0/log.1270p200
+Running on nid00630
+  Slave nid00601 rank 1 executing "1613p052" task_id "59"
+2526p137
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/130//rs0/log.1301p132
+Running on nid00601
+  Slave nid00631 rank 4 executing "1320p122" task_id "58"
+0095m102
+  Slave nid00633 rank 9 executing "1263p102" task_id "60"
+1813m045
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/154//rs0/log.1541m002
+Running on nid00633
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/154//rs0/log.1541m012
+Running on nid00631
+  Slave nid00632 rank 6 executing "0081p065" task_id "61"
+1657p297
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/333//rs0/log.3333p137
+Running on nid00632
+  Slave nid00631 rank 5 executing "3515p207" task_id "62"
+1823m060
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/351//rs0/log.3516p195
+Running on nid00631
+  Slave nid00632 rank 7 executing "0681m222" task_id "63"
+1263p097
+  Slave nid00630 rank 2 executing "2281p135" task_id "64"
+0083p052
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/321//rs0/log.3213p177
+Running on nid00632
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/066//rs0/log.0667m240
+Running on nid00630
+  Slave nid00633 rank 8 executing "2241m025" task_id "65"
+1655p310
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/002//rs0/log.0026m117
+Running on nid00633
+  Slave nid00601 rank 1 executing "2526p137" task_id "67"
+1301p132
+  Slave nid00630 rank 3 executing "3477p100" task_id "66"
+1270p200
+  Slave nid00633 rank 9 executing "1813m045" task_id "69"
+1541m002
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/067//rs0/log.0679m245
+Running on nid00630
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/160//rs0/log.1600p045
+Running on nid00601
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/124//rs0/log.1244p095
+Running on nid00633
+  Slave nid00631 rank 4 executing "0095m102" task_id "68"
+1541m012
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/210//rs0/log.2108p080
+Running on nid00631
+  Slave nid00632 rank 6 executing "1657p297" task_id "70"
+3333p137
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/223//rs0/log.2236p142
+Running on nid00632
+  Slave nid00632 rank 7 executing "1263p097" task_id "73"
+3213p177
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/001//rs0/log.0019m120
+Running on nid00632
+  Slave nid00631 rank 5 executing "1823m060" task_id "71"
+3516p195
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/166//rs0/log.1663p167
+Running on nid00631
+  Slave nid00630 rank 2 executing "0083p052" task_id "72"
+0667m240
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/070//rs0/log.0701m122
+Running on nid00630
+  Slave nid00633 rank 8 executing "1655p310" task_id "74"
+0026m117
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/067//rs0/log.0676m102
+Running on nid00633
+  Slave nid00601 rank 1 executing "1301p132" task_id "76"
+1600p045
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/001//rs0/log.0011p000
+Running on nid00601
+  Slave nid00631 rank 4 executing "1541m012" task_id "78"
+2108p080
+  Slave nid00633 rank 9 executing "1541m002" task_id "77"
+1244p095
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/128//rs0/log.1280p217
+Running on nid00631
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/143//rs0/log.1435m052
+Running on nid00633
+  Slave nid00630 rank 3 executing "1270p200" task_id "75"
+0679m245
+  Slave nid00632 rank 6 executing "3333p137" task_id "79"
+2236p142
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/085//rs0/log.0854m242
+Running on nid00630
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/224//rs0/log.2243p162
+Running on nid00632
+  Slave nid00632 rank 7 executing "3213p177" task_id "81"
+0019m120
+  Slave nid00631 rank 5 executing "3516p195" task_id "80"
+1663p167
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/165//rs0/log.1650p307
+Running on nid00632
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/126//rs0/log.1265p220
+Running on nid00631
+  Slave nid00630 rank 2 executing "0667m240" task_id "82"
+0701m122
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/226//rs0/log.2263m020
+Running on nid00630
+  Slave nid00601 rank 1 executing "1600p045" task_id "84"
+0011p000
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/000//rs0/log.0006p005
+Running on nid00601
+  Slave nid00633 rank 8 executing "0026m117" task_id "83"
+0676m102
+  Slave nid00631 rank 4 executing "2108p080" task_id "87"
+1280p217
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/225//rs0/log.2251m025
+Running on nid00633
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/082//rs0/log.0824m245
+Running on nid00631
+  Slave nid00633 rank 9 executing "1244p095" task_id "86"
+1435m052
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/018//rs0/log.0183p192
+Running on nid00633
+  Slave nid00632 rank 6 executing "2236p142" task_id "88"
+2243p162
+  Slave nid00631 rank 5 executing "1663p167" task_id "90"
+1265p220
+entering scheduler...
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/068//rs0/log.0685m237
+Running on nid00631
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/009//rs0/log.0097m105
+Running on nid00632
+  Slave nid00632 rank 7 executing "0019m120" task_id "89"
+1650p307
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/347//rs0/log.3473m012
+Running on nid00632
+  Slave nid00630 rank 2 executing "0701m122" task_id "91"
+2263m020
+  Slave nid00630 rank 3 executing "0679m245" task_id "85"
+0854m242
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/242//rs0/log.2423p137
+Running on nid00630
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/181//rs0/log.1811m050
+Running on nid00630
+  Slave nid00601 rank 1 executing "0011p000" task_id "93"
+0006p005
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/001//rs0/log.0018m095
+Running on nid00601
+  Slave nid00633 rank 8 executing "0676m102" task_id "92"
+2251m025
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/009//rs0/log.0090m112
+Running on nid00633
+  Slave nid00632 rank 7 executing "1650p307" task_id "98"
+3473m012
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/358//rs0/log.3586m010
+Running on nid00632
+  Slave nid00633 rank 9 executing "1435m052" task_id "94"
+0183p192
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/069//rs0/log.0694m125
+Running on nid00633
+  Slave nid00632 rank 6 executing "2243p162" task_id "97"
+0097m105
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/323//rs0/log.3233p167
+Running on nid00632
+  Slave nid00631 rank 4 executing "1280p217" task_id "95"
+0824m245
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/001//rs0/log.0011m110
+Running on nid00631
+  Slave nid00630 rank 3 executing "0854m242" task_id "96"
+1811m050
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/193//rs0/log.1931p012
+Running on nid00630
+  Slave nid00630 rank 2 executing "2263m020" task_id "100"
+2423p137
+  Slave nid00631 rank 5 executing "1265p220" task_id "99"
+0685m237
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/350//rs0/log.3507p207
+Running on nid00630
+  Slave nid00601 rank 1 executing "0006p005" task_id "101"
+0018m095
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/166//rs0/log.1663p315
+Running on nid00631
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/207//rs0/log.2077p067
+Running on nid00601
+  Slave nid00632 rank 7 executing "3473m012" task_id "107"
+3586m010
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/124//rs0/log.1242p090
+Running on nid00632
+  Slave nid00633 rank 8 executing "2251m025" task_id "102"
+0090m112
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/321//rs0/log.3210p177
+Running on nid00633
+  Slave nid00633 rank 9 executing "0183p192" task_id "104"
+0694m125
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/350//rs0/log.3502p097
+Running on nid00633
+  Slave nid00631 rank 4 executing "0824m245" task_id "103"
+0011m110
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/006//rs0/log.0067m102
+Running on nid00631
+  Slave nid00632 rank 6 executing "0097m105" task_id "106"
+3233p167
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/142//rs0/log.1427m055
+Running on nid00632
+  Slave nid00630 rank 3 executing "1811m050" task_id "109"
+1931p012
+  Slave nid00601 rank 1 executing "0018m095" task_id "110"
+2077p067
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/007//rs0/log.0071p067
+Running on nid00630
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/085//rs0/log.0852m230
+Running on nid00601
+  Slave nid00630 rank 2 executing "2423p137" task_id "108"
+3507p207
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/229//rs0/log.2295p115
+Running on nid00630
+  Slave nid00631 rank 5 executing "0685m237" task_id "105"
+1663p315
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/SV_south/logs/008//rs0/log.0087m117
+Running on nid00631
+  Slave nid00633 rank 8 executing "0090m112" task_id "111"
+3210p177
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/225//rs0/log.2258m025
+Running on nid00633
+  Slave nid00632 rank 7 executing "3586m010" task_id "112"
+1242p090
+I am  nid00601 rank 0 (total 10)
+Master: slave finished is task and says "I completed my task (1)"
+Master: slave finished is task and says "I completed my task (0)"
+Master: slave finished is task and says "I completed my task (4)"
+Master: slave finished is task and says "I completed my task (6)"
+Master: slave finished is task and says "I completed my task (3)"
+Master: slave finished is task and says "I completed my task (5)"
+Master: slave finished is task and says "I completed my task (7)"
+Master: slave finished is task and says "I completed my task (2)"
+Master: slave finished is task and says "I completed my task (8)"
+Master: slave finished is task and says "I completed my task (9)"
+Master: slave finished is task and says "I completed my task (12)"
+Master: slave finished is task and says "I completed my task (11)"
+Master: slave finished is task and says "I completed my task (14)"
+Master: slave finished is task and says "I completed my task (16)"
+Master: slave finished is task and says "I completed my task (13)"
+Master: slave finished is task and says "I completed my task (15)"
+Master: slave finished is task and says "I completed my task (17)"
+Master: slave finished is task and says "I completed my task (10)"
+Master: slave finished is task and says "I completed my task (18)"
+Master: slave finished is task and says "I completed my task (19)"
+Master: slave finished is task and says "I completed my task (22)"
+Master: slave finished is task and says "I completed my task (21)"
+Master: slave finished is task and says "I completed my task (24)"
+Master: slave finished is task and says "I completed my task (25)"
+Master: slave finished is task and says "I completed my task (26)"
+Master: slave finished is task and says "I completed my task (23)"
+Master: slave finished is task and says "I completed my task (20)"
+Master: slave finished is task and says "I completed my task (27)"
+Master: slave finished is task and says "I completed my task (28)"
+Master: slave finished is task and says "I completed my task (32)"
+Master: slave finished is task and says "I completed my task (33)"
+Master: slave finished is task and says "I completed my task (29)"
+Master: slave finished is task and says "I completed my task (30)"
+Master: slave finished is task and says "I completed my task (31)"
+Master: slave finished is task and says "I completed my task (35)"
+Master: slave finished is task and says "I completed my task (34)"
+Master: slave finished is task and says "I completed my task (36)"
+Master: slave finished is task and says "I completed my task (37)"
+Master: slave finished is task and says "I completed my task (38)"
+Master: slave finished is task and says "I completed my task (39)"
+Master: slave finished is task and says "I completed my task (40)"
+Master: slave finished is task and says "I completed my task (43)"
+Master: slave finished is task and says "I completed my task (44)"
+Master: slave finished is task and says "I completed my task (45)"
+Master: slave finished is task and says "I completed my task (41)"
+Master: slave finished is task and says "I completed my task (46)"
+Master: slave finished is task and says "I completed my task (42)"
+Master: slave finished is task and says "I completed my task (48)"
+Master: slave finished is task and says "I completed my task (47)"
+Master: slave finished is task and says "I completed my task (49)"
+Master: slave finished is task and says "I completed my task (52)"
+Master: slave finished is task and says "I completed my task (50)"
+Master: slave finished is task and says "I completed my task (51)"
+Master: slave finished is task and says "I completed my task (53)"
+Master: slave finished is task and says "I completed my task (55)"
+Master: slave finished is task and says "I completed my task (54)"
+Master: slave finished is task and says "I completed my task (56)"
+Master: slave finished is task and says "I completed my task (57)"
+Master: slave finished is task and says "I completed my task (59)"
+Master: slave finished is task and says "I completed my task (58)"
+Master: slave finished is task and says "I completed my task (60)"
+Master: slave finished is task and says "I completed my task (61)"
+Master: slave finished is task and says "I completed my task (62)"
+Master: slave finished is task and says "I completed my task (64)"
+Master: slave finished is task and says "I completed my task (63)"
+Master: slave finished is task and says "I completed my task (65)"
+Master: slave finished is task and says "I completed my task (66)"
+Master: slave finished is task and says "I completed my task (67)"
+Master: slave finished is task and says "I completed my task (69)"
+Master: slave finished is task and says "I completed my task (68)"
+Master: slave finished is task and says "I completed my task (70)"
+Master: slave finished is task and says "I completed my task (71)"
+Master: slave finished is task and says "I completed my task (73)"
+Master: slave finished is task and says "I completed my task (72)"
+Master: slave finished is task and says "I completed my task (74)"
+Master: slave finished is task and says "I completed my task (76)"
+Master: slave finished is task and says "I completed my task (75)"
+Master: slave finished is task and says "I completed my task (77)"
+Master: slave finished is task and says "I completed my task (78)"
+Master: slave finished is task and says "I completed my task (79)"
+Master: slave finished is task and says "I completed my task (81)"
+Master: slave finished is task and says "I completed my task (80)"
+Master: slave finished is task and says "I completed my task (82)"
+Master: slave finished is task and says "I completed my task (83)"
+Master: slave finished is task and says "I completed my task (84)"
+Master: slave finished is task and says "I completed my task (86)"
+Master: slave finished is task and says "I completed my task (87)"
+Master: slave finished is task and says "I completed my task (85)"
+Master: slave finished is task and says "I completed my task (88)"
+Master: slave finished is task and says "I completed my task (89)"
+Master: slave finished is task and says "I completed my task (90)"
+Master: slave finished is task and says "I completed my task (91)"
+Master: slave finished is task and says "I completed my task (93)"
+Master: slave finished is task and says "I completed my task (92)"
+Master: slave finished is task and says "I completed my task (95)"
+Master: slave finished is task and says "I completed my task (94)"
+Master: slave finished is task and says "I completed my task (99)"
+Master: slave finished is task and says "I completed my task (97)"
+Master: slave finished is task and says "I completed my task (98)"
+Master: slave finished is task and says "I completed my task (100)"
+Master: slave finished is task and says "I completed my task (96)"
+Master: slave finished is task and says "I completed my task (101)"
+Master: slave finished is task and says "I completed my task (102)"
+Master: slave finished is task and says "I completed my task (107)"
+Master: slave finished is task and says "I completed my task (104)"
+Master: slave finished is task and says "I completed my task (106)"
+Master: slave finished is task and says "I completed my task (103)"
+Master: slave finished is task and says "I completed my task (109)"
+Master: slave finished is task and says "I completed my task (108)"
+Master: slave finished is task and says "I completed my task (105)"
+Master: slave finished is task and says "I completed my task (110)"
+Master: slave finished is task and says "I completed my task (112)"
+Master: slave finished is task and says "I completed my task (111)"
+Master: slave finished is task and says "I completed my task (113)"
+Master: slave finished is task and says "I completed my task (115)"
+Master: slave finished is task and says "I completed my task (114)"
+Master: slave finished is task and says "I completed my task (116)"
+Master: slave finished is task and says "I completed my task (119)"
+Master: slave finished is task and says "I completed my task (117)"
+Master: slave finished is task and says "I completed my task (118)"
+Master: slave finished is task and says "I completed my task (121)"
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/243//rs0/log.2438p045
+Running on nid00632
+  Slave nid00633 rank 9 executing "0694m125" task_id "113"
+3502p097
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/002//rs0/log.0029m107
+Running on nid00633
+  Slave nid00631 rank 4 executing "0011m110" task_id "115"
+0067m102
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/345//rs0/log.3451m005
+Running on nid00631
+  Slave nid00632 rank 6 executing "3233p167" task_id "114"
+1427m055
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/152//rs0/log.1526p007
+Running on nid00632
+  Slave nid00630 rank 3 executing "1931p012" task_id "116"
+0071p067
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/249//rs0/log.2499p125
+Running on nid00630
+  Slave nid00630 rank 2 executing "3507p207" task_id "117"
+2295p115
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/007//rs0/log.0079p055
+Running on nid00630
+  Slave nid00631 rank 5 executing "1663p315" task_id "118"
+0087m117
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/166//rs0/log.1669p157
+Running on nid00631
+  Slave nid00601 rank 1 executing "2077p067" task_id "119"
+0852m230
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/142//rs0/log.1424m055
+Running on nid00601
+  Slave nid00631 rank 4 executing "0067m102" task_id "123"
+3451m005
+entering scheduler...
+
+logging to.../global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/logs/183//rs0/log.1831m055
+Running on nid00631
+srun: got SIGCONT
+slurmstepd: error: *** STEP 28306258.1 ON nid00601 CANCELLED AT 2020-02-20T20:32:37 ***
+slurmstepd: error: *** JOB 28306258 ON nid00601 CANCELLED AT 2020-02-20T20:32:37 ***
+srun: forcing job termination
