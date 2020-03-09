@@ -13,7 +13,6 @@ TYPE_sel=SEED['TYPE']
 ntype = np.zeros(len(SEED['TYPE']))
 ntype[(SEED['TYPE']!='DEV')]=1
 ntype[(SEED['TYPE']=='DEV')]=4
-print(ntype)
 
 def get_radec(radec,\
               ndraws=1,random_state=np.random.RandomState()):
@@ -81,13 +80,15 @@ def draw_points_eboss(radec, seed, ndraws, outdir='./', startid=1):
         print('Wrote %s' % fn)
 #step 1
 radecs = np.loadtxt(os.environ['obiwan_out']+'/radec.txt')
+if len(radecs.shape)==1:
+    radecs=[radecs]
 N=len(radecs)
 i=0
 for radec in radecs:
     print('%d/%d'%(i,N))
     i+=1
     radec={'ra1':radec[0],'ra2':radec[1],'dec1':radec[2],'dec2':radec[3]}
-    draw_points_eboss(radec,1,100000)
+    draw_points_eboss(radec,1,int(os.environ['TOTAL_POINTS']))
 
 #step2 stack
 

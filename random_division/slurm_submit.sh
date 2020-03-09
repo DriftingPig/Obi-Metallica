@@ -10,7 +10,7 @@
 #SBATCH --mail-user=kong.291@osu.edu
 #SBATCH --mail-type=ALL
 
-export name_for_run=SV_south
+export name_for_run=cosmos_repeat
 export obiwan_out=$CSCRATCH/Obiwan/dr8/obiwan_out/$name_for_run
 export obiwan_data=$CSCRATCH/Obiwan/dr8/obiwan_data/legacysurveydir_dr8/
 export NODE_NUM=10 #this should be consistent with the number of nodes you request
@@ -26,12 +26,14 @@ export XDG_CONFIG_HOME=/dev/shm
 
 upper_lim=$(( NODE_NUM - 1 ))
 
+mkdir $obiwan_out/$cosmos_repeat/divided_randoms/
+
 for (( i=0; i<upper_lim; i++ ))
 do
-	srun -n 1 -c 64 python GetBricksSrc_SV.py $i &
+	srun -n 1 -c 64 python GetBricksSrc.py $i &
 done
 
-srun -n 1 -c 64 python GetBricksSrc_SV.py $upper_lim 
+srun -n 1 -c 64 python GetBricksSrc.py $upper_lim 
 
 wait
 

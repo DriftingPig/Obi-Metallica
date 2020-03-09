@@ -89,7 +89,7 @@ SLURM_JOB_ID=0
 
 cd 
 #echo /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_data/DR3_copies/legacysurveydir_dr3_copy${2}${1}
-python /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/dr8/kenobi_SV2.py --dataset ${dataset} -b $1 \
+python /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/dr8/kenobi_cosmos.py --dataset ${dataset} -b $1 \
 --nobj ${nobj} --rowstart ${rowstart} -o ${object} \
 --randoms_db ${randoms_db} --outdir $outdir --add_sim_noise \
 --threads $threads \
@@ -98,6 +98,6 @@ python /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_code/dr8/
 --randoms_from_fits $RANDOMS_FROM_FITS \
 --verbose \
 --pickle "${outdir}/pickles/${bri}/${brick}/${rsdir}/runbrick-%(brick)s-%%(stage)s.pickle" \
->> $log 2>&1
-#--all-blobs \
+--all-blobs 
+#>> $log 2>&1
 #--survey_dir /global/cscratch1/sd/huikong/obiwan_Aug/repos_for_docker/obiwan_data/legacysurveydir_dr3/

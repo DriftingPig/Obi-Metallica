@@ -39,4 +39,8 @@ def SV_south_test():
     f.write("%.2f %.2f %.2f %.2f\n"%(radec['ra1'],radec['ra2'],radec['dec1'],radec['dec2']))
     f.close()
 
-SV_south_test()
+def cosmos_repeat():
+    f = open(os.environ['obiwan_out']+"/radec.txt","w")
+    f.write("%f %f %f %f\n"%(149,151,1.4,2.6))
+
+cosmos_repeat()

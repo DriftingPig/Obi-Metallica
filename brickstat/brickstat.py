@@ -1,6 +1,9 @@
 #e.g. python brickstat.py --name_for_run elg_like_run --rs more_rs0 --real_bricks_fn real_bricks_chunk21.txt
 # python brickstat.py --name_for_run chunk23_final --rs rs0 --real_bricks_fn real_bricks_chunk23.txt
-#  python brickstat.py --name_for_run dr8_SV --rs rs0 --real_bricks_fn SV_bricks.txt
+#  python brickstat.py --name_for_run SV_south --rs rs0 --real_bricks_fn SV_south.txt
+#python brickstat.py --name_for_run dr8_SV --rs rs0 --real_bricks_fn SV_bricks.txt
+#SV_bricks.txt
+#/global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_out/SV_south/output/tractor/
 import os
 NAME_FOR_RUN=None
 RS=None
@@ -18,6 +21,7 @@ def OneBrickClassify(brickname):
     global NAME_FOR_RUN
     global RS
     global REAL_BRICKS_FN
+
     log_dir = os.environ['obiwan_out']+'/output/logs/%s/%s/log.%s'%(brickname[:3],RS,brickname)
     if os.path.isfile(log_dir) is False:
         f1 = open('./%s/UnfinishedBricks.txt'%NAME_FOR_RUN, 'a')
@@ -58,7 +62,6 @@ def get_parser():
 if __name__ == '__main__':
     parser= get_parser()
     args = parser.parse_args()
-    #import pdb;pdb.set_trace()
     #global NAME_FOR_RUN
     #global RS
     #global REAL_BRICKS_FN
