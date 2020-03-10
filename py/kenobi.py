@@ -9,7 +9,7 @@ from __future__ import division, print_function
 if __name__ == '__main__':
     import matplotlib
     matplotlib.use('Agg')
-import h5py
+#import h5py
 import os
 import sys
 import subprocess
@@ -35,9 +35,10 @@ import fitsio
 from astropy import units
 from astropy.coordinates import SkyCoord
 
-from obiwan.db_tools import getSrcsInBrick
-from obiwan.common import get_outdir_runbrick, get_brickinfo_hack
-from obiwan.common import stack_tables
+#obiwan
+from db_tools import getSrcsInBrick
+from common import get_outdir_runbrick, get_brickinfo_hack
+from common import stack_tables
 
 # Sphinx build would crash
 #try:
@@ -53,12 +54,18 @@ from astrometry.libkd.spherematch import match_radec
 from tractor.psfex import PsfEx, PsfExModel
 from tractor.basics import GaussianMixtureEllipsePSF, RaDecPos
 from tractor.sfd import SFDMap
+from tractor.galaxy import DevGalaxy, ExpGalaxy
+from legacypipe.survey import LegacyEllipseWithPriors
+import tractor
+from tractor import *
+
+
 
 import galsim
 #except ImportError:
 #    pass
 
-DATASETS=['dr5','dr3','cosmos','dr6']
+DATASETS=['dr5','dr3','cosmos','dr6','dr8']
 
 def write_dict(fn,d):
     '''d -- dictionary'''
@@ -156,7 +163,7 @@ class SimDecals(LegacySurveyData):
                  output_dir=None,add_sim_noise=False, seed=0,
                  image_eq_model=False,**kwargs):
         self.dataset= dataset
-
+        #import pdb;pdb.set_trace()
         kw= dict(survey_dir=survey_dir,
                  output_dir=output_dir)
         if self.dataset == 'cosmos':
@@ -182,7 +189,7 @@ class SimDecals(LegacySurveyData):
         return fns
 
     def ccds_for_fitting(self, brick, ccds):
-        if self.dataset in ['dr3','dr5']:
+        if self.dataset in ['dr3','dr5','dr8']:
             return np.flatnonzero(ccds.camera == 'decam')
         elif self.dataset in ['cosmos']:
             return np.flatnonzero(ccds.camera == 'decam+noise')
@@ -268,10 +275,8 @@ class SimImage(DecamImage):
     """
 
     def __init__(self, survey, t):
-        #hui-debug t0
         #t0 = time_builtin.clock()
         super(SimImage, self).__init__(survey, t)
-        #hui-debug t1
         #t1 = time_builtin.clock()
         self.t = t
         if self.survey.dataset in ['dr3']:
@@ -279,52 +284,27 @@ class SimImage(DecamImage):
             self.t.rename('arawgain', 'gain')
         elif self.survey.dataset in ['dr5']:
             assert 'gain' in self.t.get_columns()
-        #hui-debug t2
-        #t2 = time_builtin.clock()
         # Find image on proj or proja if doesn't exist
-        dirs=dict(proj='/global/project/projectdirs/cosmo/staging/decam',
-                  proja='/global/projecta/projectdirs/cosmo/staging/decam')
-        #t21 = time_builtin.clock()
-        #sys.stdout.flush()
-        if not os.path.exists(self.imgfn):
-            #t22 = time_builtin.clock()
-            #print('doesnt exist: %s, finding new location for file' % self.imgfn)
-            base=os.path.basename(self.imgfn)
-            #t23 = time_builtin.clock()
-            found = glob('%s/NonDECaLS/*/%s' % (dirs['proja'],base), recursive=False)
-            if len(found) == 0:
-                 found = glob('%s/NonDECaLS/*/%s' % (dirs['proj'],base), recursive=False)
-                 if len(found) == 0:
-                        found= glob('%s/*/*/%s' % (dirs['proja'], base), recursive=False)
-                        if len(found) == 0:
-                               found= glob('%s/*/*/%s' % (dirs['proj'],base), recursive=False)
-            if len(found) == 0:
-                 raise OSError('cannot find image on project or projecta: %s' % base)
-            else:
-                self.imgfn= found[0]
-            print('found new location, overwrite self.imgfn with %s' % self.imgfn)
-            #t3 = time_builtin.clock()
-            sys.stdout.flush()
-            self.wtfn= (self.imgfn.replace('_oki_','_oow_')
+        base_fn = os.path.basename(self.imgfn) 
+        date_fn = os.path.basename(os.path.dirname(self.imgfn))[:10]
+        found = glob('/global/project/projectdirs/cosmo/staging/decam/CP/*/%s/%s'%(date_fn,base_fn), recursive=False)
+        if len(found) == 0:
+            found = glob('/global/project/projectdirs/cosmo/staging/decam/NonDECaLS/%s/%s'%(date_fn,base_fn), recursive=False)
+        if len(found) == 0:
+            print('%s not found'%(self.imgfn))
+            raise
+        else:
+            self.imgfn= found[0]
+        #t3 = time_builtin.clock()
+        sys.stdout.flush()
+        self.wtfn= (self.imgfn.replace('_oki_','_oow_')
                                   .replace('_ooi_','_oow_'))
-            self.dqfn= self.wtfn.replace('_oow_','_ood_')
-            #4 = time_builtin.clock()
-            #print('init in super(SimImage):'+str(t1-t0))
-            #print('SimImage.__init__  t2-t1: '+str(t2-t1))
-            #print('SimImage.__init__  t3-t2: '+str(t3-t2))
-            #print('SimImage.__init__  t4-t3: '+str(t4-t3))
-            #print('SimImage.__init__  t21-t22: '+str(t21-t22))
-            #print('SimImage.__init__ t22-t23L '+str(t23-t22))
-            #print('SimImage.__init__ t24-t23: '+str(t24-t23))
-            #print('SimImage.__init__ t25-t24: '+str(t25-t24))
-            #print('SimImage.__init__ t3-t25: '+str(t3-t25))
-            #print('SimImage.__init__ time:'+str(time_builtin.clock()-t1))
+        self.dqfn= self.wtfn.replace('_oow_','_ood_')
 
     def get_tractor_image(self, **kwargs):
         #t0 = time_builtin.clock()
+        #import pdb;pdb.set_trace()
         tim = super(SimImage, self).get_tractor_image(**kwargs)
-        #debug: setting image to 0 by hui
-        #tim.data = np.zeros(tim.data.shape)
         #print('get_tractor_image:time'+str(time_builtin.clock()-t0))
         if tim is None: # this can be None when the edge of a CCD overlaps
             return tim
@@ -338,7 +318,7 @@ class SimImage(DecamImage):
         objtype = self.survey.metacat.get('objtype')[0]
         objstamp = BuildStamp(tim, seed=self.survey.seed,
                               camera=self.t.camera,
-                              gain=self.t.gain,exptime=self.t.exptime)
+                              gain=tim.gain,exptime=self.t.exptime)
         # ids make it onto a ccd (geometry cut)
         tim.ids_added=[]
 
@@ -353,10 +333,12 @@ class SimImage(DecamImage):
 
         # Store simulated galaxy images in tim object
         # Loop on each object.
+        #f = open(self.stamp_stat_fn,'a')
         for ii, obj in enumerate(self.survey.simcat):
             # Print timing
             t0= Time()
             if objtype in ['lrg','elg']:
+                obj.n = int(obj.n)
                 strin= 'Drawing 1 %s: n=%.2f, rhalf=%.2f, e1=%.2f, e2=%.2f' % \
                         (objtype.upper(), obj.n,obj.rhalf,obj.e1,obj.e2)
                 print(strin)
@@ -372,7 +354,6 @@ class SimImage(DecamImage):
             t0= ptime('Finished Drawing %s: id=%d band=%s dbflux=%f addedflux=%f' %
                 (objtype.upper(), obj.id,objstamp.band,
                  obj.get(objstamp.band+'flux'),stamp.array.sum()), t0)
-
             stamp_nonoise= stamp.copy()
             if self.survey.add_sim_noise:
                 stamp += noise_for_galaxy(stamp,objstamp.nano2e)
@@ -390,8 +371,9 @@ class SimImage(DecamImage):
                 keep = np.ones(tim_dq[overlap].array.shape)
                 keep[ tim_dq[overlap].array > 0 ] = 0.
                 ivarstamp *= keep
-
                 # Add stamp to image
+                #import pdb;pdb.set_trace()
+                #f.write(str(tim_image[overlap].array.sum()/np.ones_like(tim_image[overlap].array).sum())+'\n')
                 back= tim_image[overlap].copy()
                 tim_image[overlap] += stamp #= back.copy() + stamp.copy()
                 # Add variances
@@ -406,6 +388,7 @@ class SimImage(DecamImage):
                 if np.min(sims_ivar.array) < 0:
                     log.warning('Negative invvar!')
                     import pdb ; pdb.set_trace()
+        #f.close()
         tim.sims_image = sims_image.array
         tim.sims_inverr = np.sqrt(sims_ivar.array)
         # Can set image=model, ivar=1/model for testing
@@ -469,7 +452,81 @@ def ivar_for_galaxy(gal,nano2e):
     return var
 
 
+
+
 class BuildStamp():
+
+      """
+          this version of BuildStamp draws tractor model galaxies instead of GalSim Galaxies
+          Does the drawing of simulated sources on a single exposure
+          Args:
+          tim: Tractor Image Object for a specific CCD
+          gain: gain of the CCD
+      """
+      def __init__(self,tim,seed=0,camera=None,gain=None,exptime=None): #I think tim is the only useful thing here
+          self.band = tim.band.strip()
+          self.zpscale = tim.zpscale      # nanomaggies-->ADU (decam) or e-/sec (bass,mzls)
+          assert(camera in ['decam','mosaic','90prime'])
+          if camera == 'decam':
+               self.nano2e = self.zpscale*gain
+          else:
+                self.nano2e = self.zpscale
+          self.tim = tim
+      def setlocal(self,obj):#get a sub_tim image as what's been done in fitblobs stage. see _blob_iter? code for details
+              """Get the pixel positions, local wcs, local PSF."""
+              #changed to fit for what's been done in fitblobs stage
+              #center value of ra,dec for input image
+              ra_cen,dec_cen = obj.get('ra'), obj.get('dec')
+              #changed to pixel value x,y
+              (flag, x_cen,y_cen) = self.tim.subwcs.radec2pixelxy(ra_cen,dec_cen)
+              #size of the stamp is 64*64, so get an image of the same size, unless it's around the edge
+              x_cen_int,y_cen_int = round(x_cen),round(y_cen)
+              self.sx0,self.sx1,self.sy0,self.sy1 = x_cen-32,x_cen+31,y_cen-32,y_cen+31
+              (h,w) = self.tim.shape
+              self.sx0 = np.clip(int(self.sx0), 0, w-1)
+              self.sx1 = np.clip(int(self.sx1), 0, w-1) + 1
+              self.sy0 = np.clip(int(self.sy0), 0, h-1)
+              self.sy1 = np.clip(int(self.sy1), 0, h-1) + 1
+              subslc = slice(self.sy0,self.sy1),slice(self.sx0,self.sx1)
+              subimg = self.tim.getImage ()[subslc]
+              subie  = self.tim.getInvError()[subslc]
+              subwcs = self.tim.getWcs().shifted(self.sx0, self.sy0)
+              subsky = self.tim.getSky().shifted(self.sx0, self.sy0)
+              subpsf = self.tim.psf.constantPsfAt((self.sx0+self.sx1)/2., (self.sy0+self.sy1)/2.)
+              new_tim = tractor.Image(data=subimg, inverr=subie, wcs=subwcs,psf=subpsf, photocal=self.tim.getPhotoCal(), sky=subsky, name=self.tim.name)
+              return new_tim
+      def elg(self,obj):
+          new_tim = self.setlocal(obj)
+          n,ra,dec,r_half,e1,e2,flux = int(obj.get('n')),float(obj.get('ra')),float(obj.get('dec')),float(obj.get('rhalf')),float(obj.get('e1')),float(obj.get('e2')),float(obj.get(self.band+'flux'))
+          log_r_half = np.log(r_half)
+          assert(self.band in ['g','r','z'])
+          if self.band == 'g':
+               brightness =  tractor.NanoMaggies(g=flux, order=['g'])
+          if self.band == 'r':
+                brightness =  tractor.NanoMaggies(r=flux, order=['r'])
+          if self.band == 'z':
+                brightness =  tractor.NanoMaggies(z=flux, order=['z'])
+          shape = LegacyEllipseWithPriors(log_r_half, e1, e2)
+          if n==1:
+              new_gal = ExpGalaxy(RaDecPos(ra,dec),brightness,shape)
+          elif n==4:
+              new_gal = DevGalaxy(RaDecPos(ra,dec),brightness,shape)
+          else:
+               raise
+          new_tractor = Tractor([new_tim], [new_gal])
+          mod0 = new_tractor.getModelImage(0)
+          galsim_img = galsim.Image(mod0)
+          galsim_img.bounds.xmin=self.sx0
+          galsim_img.bounds.xmax=self.sx1-1
+          galsim_img.bounds.ymin=self.sy0
+          galsim_img.bounds.ymax=self.sy1-1
+          return galsim_img
+
+
+
+
+
+class BuildStamp_old():
     """Does the drawing of simulated sources on a single exposure
 
     Args:
@@ -697,7 +754,7 @@ def get_parser():
     parser = argparse.ArgumentParser(formatter_class=argparse.
                                      ArgumentDefaultsHelpFormatter,
                                      description='DECaLS simulations.')
-    parser.add_argument('--dataset', type=str, choices=['dr5','dr3', 'cosmos','dr6'], required=True, help='see definitions in obiwan/test/README.md')
+    parser.add_argument('--dataset', type=str, choices=['dr8','dr5','dr3', 'cosmos','dr6'], required=True, help='see definitions in obiwan/test/README.md')
     parser.add_argument('-o', '--objtype', type=str, choices=['star','elg', 'lrg', 'qso'], default='star', required=True)
     parser.add_argument('-b', '--brick', type=str, default='2428p117', required=True)
     parser.add_argument('--outdir', default='./', required=False)
@@ -736,13 +793,16 @@ def get_parser():
                         help='fit models to all blobs, not just those containing sim sources')
     parser.add_argument('--subset', type=int, default=0,
                         help='COSMOS subset number [0 to 4, 10 to 12], only used if dataset = cosmos')
-    parser.add_argument('--checkpoint', action='store_true',default=False,
-                        help='turn on checkpointing')
+    #parser.add_argument('--checkpoint', action='store_true',default=False,
+    #                    help='turn on checkpointing')
     parser.add_argument('--skip_ccd_cuts', action='store_true',default=False,
                         help='no ccd cuts')
     parser.add_argument('--overwrite_if_exists', action='store_true',default=False,
                         help='run the code even if expected output already exists')
     parser.add_argument('-v', '--verbose', action='store_true', help='toggle on verbose output')
+    parser.add_argument('--ps',default=None,help = 'Not sure what it is now...#TODO')
+    parser.add_argument('--pickle',dest='pickle_pat',default=None, help = 'intermediate savings')
+    parser.add_argument('--checkpoint',dest='checkpoint_filename',default = None, help = 'I dont know either...')
     return parser
 
 def create_metadata(kwargs=None):
@@ -814,6 +874,7 @@ def create_ith_simcat(d=None):
         Nothing, saves the 'simcat' and 'skipped_ids' tables
         Adds 'simcat' table to dict 'd'
     """
+    #import pdb;pdb.set_trace()
     assert(d is not None)
     log = logging.getLogger('decals_sim')
     #chunksuffix = '{:02d}'.format(ith_chunk)
@@ -877,16 +938,17 @@ def get_runbrick_setup(**kwargs):
     from legacypipe.runbrick import get_runbrick_kwargs
     from legacypipe.runbrick import get_parser as get_runbrick_parser
     zm= kwargs['zoom']
-    cmd_line= ['--no-write', '--skip','--force-all',
+    cmd_line= ['--skip','--skip-calibs',
            '--zoom','%d' % zm[0],'%d' % zm[1],'%d' % zm[2],'%d' % zm[3],
-           '--no-wise', '--threads','%d' % kwargs['threads']]
-    if kwargs['checkpoint']:
-        checkpoint_fn= get_checkpoint_fn(kwargs['outdir'],
-                        kwargs['brick'], kwargs['rowstart'])
+           '--unwise-coadds', '--threads','%d' % kwargs['threads'],'--pickle',kwargs['pickle_pat']]
+    if kwargs['checkpoint_filename'] is not None:
+        checkpoint_fn = kwargs['checkpoint_filename']
+        #get_checkpoint_fn(kwargs['outdir'],kwargs['brick'], kwargs['rowstart'])
         cmd_line += ['--checkpoint',checkpoint_fn]
     if kwargs['stage']:
         cmd_line += ['--stage', kwargs['stage']]
     if kwargs['early_coadds']:
+        #boolean; generate the early coadds?
         cmd_line += ['--early-coadds', '--stage', 'image_coadds']
     if kwargs['skip_ccd_cuts']:
         cmd_line += ['--skip_ccd_cuts']
@@ -899,6 +961,10 @@ def get_runbrick_setup(**kwargs):
         # defaults: rex (use --simp), nsigma 6 ,hybrid-psf (--no-hybrid-psf otherwise)
         # depth cut already done (use --depth-cut to do depth cut anyway)
         cmd_line += ['--run', 'dr5']
+    elif dataset == 'dr8':
+        cmd_line += ['--run','decam']
+
+    #import pdb;pdb.set_trace()
 
     rb_parser= get_runbrick_parser()
     rb_opt = rb_parser.parse_args(args=cmd_line)
@@ -919,7 +985,7 @@ def do_one_chunk(d=None):
             'simcat': fits_table simulated source catalog for a given brick (not CCD).
 
     Note:
-        runb_brick() is 'main' for the legacypipe/Tractor pipeline
+        run_brick() is 'main' for the legacypipe/Tractor pipeline
 
     Returns:
         Nothing, but this func end ups writing out all the obiwan results
@@ -932,6 +998,7 @@ def do_one_chunk(d=None):
              output_dir=d['simcat_dir'], \
              add_sim_noise=d['args'].add_sim_noise, seed=d['seed'],\
              image_eq_model=d['args'].image_eq_model)
+    
     if d['args'].dataset == 'cosmos':
         kw.update(subset=d['args'].subset)
         simdecals= SimDecalsCosmos(**kw)
@@ -944,6 +1011,7 @@ def do_one_chunk(d=None):
         blobxy = zip(d['simcat'].get('x'), d['simcat'].get('y'))
     # Default runbrick call sequence
     obiwan_kwargs= vars(d['args'])
+    #import pdb;pdb.set_trace()
     runbrick_kwargs= get_runbrick_setup(**obiwan_kwargs)
     # Obiwan modifications
     runbrick_kwargs.update(blobxy=blobxy)
@@ -951,7 +1019,7 @@ def do_one_chunk(d=None):
     log.info('Calling run_brick with: ')
     log.info('brickname= %s' % d['brickname'])
 #    log.info('simdecals= ',simdecals)
-    log.info('runbrick_kwards= ',runbrick_kwargs)
+    log.info('runbrick_kwargs= ',runbrick_kwargs)
     # Run it: run_brick(brick, survey obj, **kwargs)
     np.random.seed(d['seed'])
     log.info(runbrick_kwargs)
@@ -995,6 +1063,7 @@ def do_ith_cleanup(d=None):
     # obiwan
     dobash('mv %s/*.fits %s/obiwan/%s/%s/%s/' % \
             (outdir,  base,bri,brick,rsdir))
+    #import pdb;pdb.set_trace()
     dobash('mv %s/coadd/%s/%s/sim_ids_added.fits %s/obiwan/%s/%s/%s/' % \
             (outdir,bri,brick,  base,bri,brick,rsdir))
     # coadd
@@ -1008,7 +1077,10 @@ def do_ith_cleanup(d=None):
                  (outdir,dr,bri,  base,dr,bri,brick,rsdir))
     # Remove original outdir
     dobash('rm -r %s' % outdir)
-
+    
+    #remove pickle files
+    dobash('rm %s/pickles/%s/%s/runbrick-%s*'% \
+            (outdir,bri,rsdir,brick))
     # Remove unneeded coadd files
     names= ['nexp','depth']
     if not d['args'].early_coadds:
@@ -1119,7 +1191,10 @@ def main(args=None):
         (not args.overwrite_if_exists)):
        print('Exiting, already finished %s' % tractor_fn)
        return 0 #sys.exit(0)
-
+    #import pdb;pdb.set_trace()
+    #print(stamp_stat_fn)
+    #f = open(stamp_stat_fn,'w')
+    #f.close()
     brickname = args.brick
     objtype = args.objtype
 
@@ -1178,7 +1253,7 @@ def main(args=None):
     # Store args in dict for easy func passing
     kwargs=dict(Samp=Samp,\
                 brickname=brickname, \
-                checkpoint=args.checkpoint, \
+                checkpoint_filename=args.checkpoint_filename, \
                 seed= seed,
                 decals_sim_dir= decals_sim_dir,\
                 brickwcs= brickwcs, \
@@ -1200,8 +1275,7 @@ def main(args=None):
         fn+= '_exceeded.txt'
         junk= os.system('touch %s' % fn)
         print('Wrote %s' % fn)
-        #we want not to add any sample -- obiwan
-        #raise ValueError('starting row=%d exceeds number of artificial sources, quit' % args.rowstart)
+        raise ValueError('starting row=%d exceeds number of artificial sources, quit' % args.rowstart)
 
     # Create simulated catalogues and run Tractor
     create_metadata(kwargs=kwargs)
@@ -1211,20 +1285,15 @@ def main(args=None):
     #log.info('Working on chunk {:02d}/{:02d}'.format(ith_chunk,kwargs['nchunk']-1))
     # Random ra,dec and source properties
     create_ith_simcat(d=kwargs)
-    #log.info('HUI-TEST:::out of create_ith_simcat')
     t0= ptime('create_ith_simcat',t0)
     # Run tractor
-    #log.info('HUI-TEST:::running tractor')
     do_one_chunk(d=kwargs)
-    #log.info('HUI-TEST::: checkpoint3i')
     t0= ptime('do_one_chunk',t0)
     # Clean up output
     if args.no_cleanup == False:
         do_ith_cleanup(d=kwargs)
-    #log.info('HUI-TEST::: checkpoint3j')
     t0= ptime('do_ith_cleanup',t0)
     log.info('All done!')
-    #log.info('HUI-TEST::: checkpoint3k')
     return 0
 
 if __name__ == '__main__':

@@ -3,4 +3,4 @@ export PYTHONPATH=/global/cscratch1/sd/huikong/Obiwan/dr8/obiwan_code/py/:$PYTHO
 echo $PYTHONPATH
 #python ./example1.py $name_for_run
 
-./slurm_brick_scheduler.sh 1503p015
+./slurm_brick_scheduler.sh 1506p022

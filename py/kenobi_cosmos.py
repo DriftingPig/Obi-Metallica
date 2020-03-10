@@ -191,7 +191,10 @@ class SimDecals(LegacySurveyData):
 
     def ccds_for_fitting(self, brick, ccds):
         if self.dataset in ['dr3','dr5','dr8']:
-            return np.flatnonzero(ccds.camera == 'decam')
+            if len(np.flatnonzero(ccds.camera == 'decam'))>0:
+                return np.flatnonzero(ccds.camera == 'decam')
+            else:
+                return np.flatnonzero(ccds.camera == 'decam+noise')
         elif self.dataset in ['cosmos']:
             return np.flatnonzero(ccds.camera == 'decam+noise')
         #elif self.dataset == 'DR4':
@@ -1095,6 +1098,12 @@ def do_ith_cleanup(d=None):
     for name in names:
         dobash('rm %s/coadd/%s/%s/%s/*%s*' %
                     (base,bri,brick,rsdir,name))
+    
+    pickle_dir = os.path.dirname(outdir)
+    pickle_dir = os.path.dirname(pickle_dir)
+    pickle_dir = os.path.dirname(pickle_dir)
+    dobash('rm %s/pickles/%s/%s/runbrick-%s*'% \
+            (pickle_dir,bri,rsdir,brick))
     if rsdir != 'rs0':
         # jpgs are nice to look at, but only keep in 1 dir
         for name in ['jpg']:

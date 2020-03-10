@@ -7,7 +7,7 @@
 export name_for_run=cosmo_sub$sub_num
 export randoms_db=None #run from a fits file
 export dataset=dr8
-export rowstart=2
+export rowstart=0
 export do_skipids=no
 export do_more=no
 export minid=1
