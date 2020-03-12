@@ -15,8 +15,7 @@
 
 #Note: in slurm_brick_scheduler, RANDOMS_FROM_FITS needs to be changed everytime you start a new run
 #note:only rowstart 0/201 are valid, 101 is not valid
-export sub_num=0
-export name_for_run=cosmo_sub$sub_num
+export name_for_run=dr8_SV
 export randoms_db=None #run from a fits file
 export dataset=dr8
 export rowstart=0
@@ -30,9 +29,9 @@ export usecores=32
 export threads=$usecores
 #threads=1
 #obiwan paths
-export obiwan_data=$CSCRATCH/Obiwan/dr8/obiwan_data/cosmos_repeats/$name_for_run
+export obiwan_data=$CSCRATCH/Obiwan/dr8/obiwan_data/legacysurveydir_dr8/
 export obiwan_code=$CSCRATCH/Obiwan/dr8/obiwan_code 
-export obiwan_out=$CSCRATCH/Obiwan/dr8/obiwan_out/cosmo_subs_all/$name_for_run   
+export obiwan_out=$CSCRATCH/Obiwan/dr8/obiwan_out/$name_for_run
 
 # Load production env
 #source $CSCRATCH/obiwan_code/obiwan/bin/run_atnersc/bashrc_obiwan
